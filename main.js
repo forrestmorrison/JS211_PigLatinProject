@@ -18,14 +18,10 @@ const pigLatin = (word) => {
 
 let vowels = ["a", "e", "i", "o", "u"];
 let wordArray = word.toLowerCase().split("");
-
-// if (vowels.includes(wordArray[0])) {
-//   return wordArray.join("") + "way";
-// }
-
 let firstCons = [];
 let latinWord = "";
-
+let ay = "ay";
+let yay = "yay";
 for (let i = 0; i < wordArray.length; i++) {
   if (vowels.includes(wordArray[i])) {
     break;
@@ -34,8 +30,12 @@ for (let i = 0; i < wordArray.length; i++) {
     firstCons.push(wordArray[i]);
   }
 }
-
-return wordArray.slice(firstCons.length).join("") + firstCons + "ay";
+if (firstCons.length === 0) {
+  latinWord = yay;
+} else {
+  latinWord = ay;
+}
+return wordArray.slice(firstCons.length).join("") + firstCons + latinWord;
 
 }
 
