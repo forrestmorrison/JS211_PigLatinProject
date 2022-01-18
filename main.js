@@ -17,7 +17,7 @@ const pigLatin = (word) => {
 // input: Austin   output: austinyay
 
 let vowels = ["a", "e", "i", "o", "u"];
-let wordArray = word.toLowerCase().split("");
+let wordArray = word.trim().toLowerCase().split("");
 let firstCons = [];
 let latinWord = "";
 let ay = "ay";
@@ -35,11 +35,11 @@ if (firstCons.length === 0) {
 } else {
   latinWord = ay;
 }
-return wordArray.slice(firstCons.length).join("") + firstCons + latinWord;
+return wordArray.slice(firstCons.length).join("") + firstCons.join("") + latinWord;
 
 }
 
-console.log(pigLatin("Seattle"));
+console.log(pigLatin("Chicago"));
 
 // the first function called in the program to get an input from the user
 // to run the function use the command: node main.js
