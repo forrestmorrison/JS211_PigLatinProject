@@ -3,13 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <script src="main.js"></script>
+    <script src="pigLatin-gui.js"></script>
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <h1>Pig Latin</h1>
     <hr/>
     <div id="display-element"></div>
-    <button onclick="displayDate()">Click Me</button>
+    <button onclick="pigLatin()">Igpe Atinle!</button>
+    <input id="input-box" type="text" oninput="saveInput(this.value)">
+    <div id="myDiv"></div>
     <hr/>
   </body>
 </html>
